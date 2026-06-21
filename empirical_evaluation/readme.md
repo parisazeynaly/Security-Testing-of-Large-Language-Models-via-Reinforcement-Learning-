@@ -4,11 +4,11 @@ This directory contains the complete benchmarking suite, dataset configurations,
 
 > **Title:** Beyond Token Correlations: An Empirical Evaluation of Cross-Model Transferability and Cost-Efficiency in Causal Red-Teaming  
 > **Authors:** Parisa Zeinaliashtiyani, Roberto Pietrantuono  
-> **Status:** Under Review / [Preprint on arXiv](https://arxiv.org) (Link Placeholder)
+> 
 
 ---
 
-## 🔬 Directory Structure
+##  Directory Structure
 
 ```text
 empirical_evaluation/
@@ -31,7 +31,7 @@ empirical_evaluation/
 
 ---
 
-## 🚀 Key Empirical Reproducibility Checkpoints
+##  Key Empirical Reproducibility Checkpoints
 
 ### 1. Cross-Model Zero-Shot Transferability (`RQ1`)
 Our framework extracts invariant structural causal paths optimized on `Llama-3.3-70B` and deploys them *zero-shot* onto next-generation architectures without policy weight re-tuning. Execute the transferability pipeline via:
@@ -63,18 +63,18 @@ python tracking_plots/plot_cost_curve.py \
 
 ---
 
-## 📈 Baseline Reference Frameworks
+## Baseline Reference Frameworks
 All benchmarking experiments are validated explicitly against two distinct red-teaming baselines included in this directory:
 1.  **Static Human-Engineered Layouts:** `DAN` (Do Anything Now) static token matrices.
 2.  **Reward-Blind Observational RL:** `RLBreaker` running standard Proximal Policy Optimization (PPO) over unconstrained text strings without structural causal priors.
 
-## 🛠️ Compute Specifications
+## Compute Specifications
 *   **Local Hardware Target:** NVIDIA A100 (80GB VRAM) for local factor extraction, causal graph discovery (FCI), and Partial Ancestral Graph (PAG) step-processing.
 *   **Global Remote Target APIs:** Commercial token processing streams with strict rate-limiting quotas.
 
 ---
 
-## 📝 Citation
+## Citation
 If you use this empirical framework or our logged benchmark datasets for your research, please cite our empirical evaluation work:
 
 ```bibtex
